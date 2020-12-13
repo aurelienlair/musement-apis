@@ -683,7 +683,7 @@
         "id": "f3383772-6145-48af-9a06-f97e71015796",
         "type": "text/javascript",
         "exec": [
-          "postman.setEnvironmentVariable(\"base_url_qual\", \"https://api-sandbox-origin.musement.com/api/v3/activities/\");",
+          "postman.setEnvironmentVariable(\"baseUrl\", \"https://api-sandbox-origin.musement.com/api/v3/activities/\");",
           "postman.setEnvironmentVariable(\"apiVersion\", \"3.4.0\");",
           "postman.setEnvironmentVariable(\"contentType\", \"application/json\");",
           "postman.setEnvironmentVariable(\"acceptType\", \"application/json\");",
