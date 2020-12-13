@@ -658,12 +658,7 @@
             "id": "e95c27df-c22c-46a9-9c14-649d68d8fc1f",
             "type": "text/javascript",
             "exec": [
-              "postman.setEnvironmentVariable(\"activityUuid\", \"102ab02b-2046-11e7-9cc9-06a7e332783f\");",
-              "postman.setEnvironmentVariable(\"apiVersion\", \"3.4.0\");",
-              "postman.setEnvironmentVariable(\"contentType\", \"application/json\");",
-              "postman.setEnvironmentVariable(\"acceptType\", \"application/json\");",
-              "postman.setEnvironmentVariable(\"currencyCode\", \"USD\");",
-              "postman.setEnvironmentVariable(\"acceptLanguage\", \"us\");",
+              "pm.variables.set(\"activity_uuid\", \"102ab02b-2046-11e7-9cc9-06a7e332783f\");",
               ""
             ]
           }
@@ -688,7 +683,7 @@
         "id": "f3383772-6145-48af-9a06-f97e71015796",
         "type": "text/javascript",
         "exec": [
-          ""
+          "postman.setEnvironmentVariable(\"base_url_qual\", \"https://api-sandbox-origin.musement.com/api/v3/activities/\");"
         ]
       }
     },
