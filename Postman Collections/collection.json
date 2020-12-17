@@ -684,6 +684,7 @@
         "type": "text/javascript",
         "exec": [
           "postman.setEnvironmentVariable(\"baseUrl\", \"https://api-sandbox-origin.musement.com/api/v3/activities/\");",
+          "postman.setEnvironmentVariable(\"baseUrlMock\", \"https://ebd289e0-53ea-44a8-aa03-f32e58a78eb4.mock.pstmn.io\");",
           "postman.setEnvironmentVariable(\"apiVersion\", \"3.4.0\");",
           "postman.setEnvironmentVariable(\"contentType\", \"application/json\");",
           "postman.setEnvironmentVariable(\"acceptType\", \"application/json\");",
