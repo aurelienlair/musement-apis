@@ -242,7 +242,7 @@
               "script": {
                 "id": "c76f095f-11c6-4c70-9adb-4e2472d396cd",
                 "exec": [
-                  "postman.setEnvironmentVariable(\"currency\",\"USD\");"
+                  ""
                 ],
                 "type": "text/javascript"
               }
