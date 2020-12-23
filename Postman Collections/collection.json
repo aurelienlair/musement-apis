@@ -21,6 +21,18 @@
                 ],
                 "type": "text/javascript"
               }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "4d27a22d-92b7-4f9a-b2f7-aa55c0bd1ca6",
+                "exec": [
+                  "pm.test(\"Check http status code\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
             }
           ],
           "_postman_id": "201a5bff-fc57-420a-8d78-ca94b11cf2ca",
@@ -66,6 +78,10 @@
               "script": {
                 "id": "d378a0ca-8b76-49ef-b144-58452bc79ef6",
                 "exec": [
+                  "pm.test(\"Check http status code\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "",
                   "var body = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"date\", body[0].day);",
                   ""
@@ -102,6 +118,10 @@
               "script": {
                 "id": "2a8106a5-77dc-4c80-b098-fb373d2f5640",
                 "exec": [
+                  "pm.test(\"Check http status code\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "",
                   "var body = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"productIdAdult\", body[0].groups[0].slots[0].products[0].product_id);",
                   "postman.setEnvironmentVariable(\"productType\", body[0].groups[0].slots[0].products[0].type);"
@@ -147,6 +167,10 @@
               "script": {
                 "id": "c976d2c0-4239-410c-ad02-c4b9e0257ab5",
                 "exec": [
+                  "pm.test(\"Check http status code\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "",
                   "var body = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"cartUuid\", body.uuid);"
                 ],
@@ -203,6 +227,10 @@
               "script": {
                 "id": "a998b535-8f2a-4d16-9bfb-0ff4bb86b9df",
                 "exec": [
+                  "pm.test(\"Check http status code\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "",
                   "var body = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"cart_item_uuid\", body.uuid);"
                 ],
@@ -259,7 +287,9 @@
               "script": {
                 "id": "93951950-6ef0-479c-88a7-3472cb06cc07",
                 "exec": [
-                  ""
+                  "pm.test(\"Check http status code\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});"
                 ],
                 "type": "text/javascript"
               }
@@ -430,7 +460,9 @@
               "script": {
                 "id": "27cb5425-247a-4684-88ae-e58e6c4e5a3a",
                 "exec": [
-                  ""
+                  "pm.test(\"Check http status code\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});"
                 ],
                 "type": "text/javascript"
               }
@@ -483,6 +515,10 @@
               "script": {
                 "id": "ab87b701-160a-4a6b-8409-c81473724c37",
                 "exec": [
+                  "pm.test(\"Check http status code\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "",
                   "var body = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"orderUuid\", body.uuid);"
                 ],
@@ -538,6 +574,20 @@
         },
         {
           "name": "9 - Pay the order with Stripe",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "b3eeee70-d93c-4297-aaef-7e2428474f3f",
+                "exec": [
+                  "pm.test(\"Check http status code\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "_postman_id": "04b061d5-3263-4fcd-a0cf-7a57fb4b8b95",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -683,7 +733,7 @@
         "id": "f3383772-6145-48af-9a06-f97e71015796",
         "type": "text/javascript",
         "exec": [
-          "postman.setEnvironmentVariable(\"baseUrl\", \"https://api-sandbox-origin.musement.com/api/v3/\");",
+          "postman.setEnvironmentVariable(\"baseUrl\", \"https://api-sandbox-origin.musement.com/api/v3\");",
           "postman.setEnvironmentVariable(\"baseUrlMock\", \"https://ebd289e0-53ea-44a8-aa03-f32e58a78eb4.mock.pstmn.io\");",
           "postman.setEnvironmentVariable(\"apiVersion\", \"3.4.0\");",
           "postman.setEnvironmentVariable(\"contentType\", \"application/json\");",
