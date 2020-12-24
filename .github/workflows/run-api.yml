@@ -1,0 +1,19 @@
+name: Build and run Postman APIs with Newman
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build-and-run:
+    name: Build and run APIs
+    runs-on: ubuntu-latest
+    env:
+      COMPOSE_FILE: .ci/docker-compose.yml
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run Newman APIs
+      run: docker-compose run newman -v "Postman Collections/collection.json:/opt/newman/src/config/collection.json"

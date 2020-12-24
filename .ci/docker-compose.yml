@@ -1,0 +1,7 @@
+version: '3.7'
+
+services:
+  newman:
+    container_name: newman
+    image: "aurelienlair/newman:1.0.0"
+    command: sleep 365d
