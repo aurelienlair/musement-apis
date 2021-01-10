@@ -2,7 +2,7 @@ name: Build and run Postman APIs with Newman
 
 on:
   push:
-    branches: master
+    branches: main
 
 jobs:
   build-and-run:
