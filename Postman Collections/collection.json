@@ -27,6 +27,7 @@
               "script": {
                 "id": "4d27a22d-92b7-4f9a-b2f7-aa55c0bd1ca6",
                 "exec": [
+                  "// test",
                   "pm.test(\"Check http status code\", function () {",
                   "  pm.response.to.have.status(200);",
                   "});"
