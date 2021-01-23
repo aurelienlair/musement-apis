@@ -29,7 +29,7 @@
                 "exec": [
                   "// test",
                   "pm.test(\"Check http status code\", function () {",
-                  "  pm.response.to.have.status(500);",
+                  "  pm.response.to.have.status(200);",
                   "});"
                 ],
                 "type": "text/javascript"
