@@ -2,21 +2,19 @@ name: Build and run Postman APIs with Newman
 
 on:
   push:
-    branches: main
+    branches: fix/newman_command
 
 jobs:
   build-and-run:
     name: Build and run APIs
     runs-on: ubuntu-latest
-    env:
-      COMPOSE_FILE: .ci/docker-compose.yml
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Run Musement APIs in Newman CI
-      run: docker-compose run newman -v "Postman Collections/collection.json:/opt/newman/src/config/collection.json"
+      run: docker run -t -v "config:/opt/newman/src/config" --rm aurelienlair/newman:1.1.0
 
     # https://github.com/rtCamp/action-slack-notify
     - name: Musement APIs ran in Newman CI has succeeded
