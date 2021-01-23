@@ -15,5 +15,30 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Run Newman APIs
+    - name: Run Musement APIs in Newman CI
       run: docker-compose run newman -v "Postman Collections/collection.json:/opt/newman/src/config/collection.json"
+
+    # https://github.com/rtCamp/action-slack-notify
+    - name: Musement APIs ran in Newman CI has succeeded
+      if: ${{ success() }}
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+        SLACK_COLOR: '#008000'
+        SLACK_ICON: ${{ secrets.SLACK_ICON }}
+        SLACK_MESSAGE: "Let's rock!!!"
+        SLACK_TITLE: 'Musement APIs Newman execution report: :done_ball:'
+        SLACK_USERNAME: Github-bot
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
+    - name: Musement APIs ran in Newman CI has failed
+      if: ${{ failure() }}
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+        SLACK_COLOR: '#FF0000'
+        SLACK_ICON: ${{ secrets.SLACK_ICON }}
+        SLACK_MESSAGE: "Houston we have a problem..(it's probably your found) check it out => https://github.com/aurelienlair/musement-apis/actions"
+        SLACK_TITLE: 'Musement APIs Newman execution report: :rotating_light:'
+        SLACK_USERNAME: Github-bot
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
