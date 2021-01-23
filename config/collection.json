@@ -29,7 +29,7 @@
                 "exec": [
                   "// test",
                   "pm.test(\"Check http status code\", function () {",
-                  "  pm.response.to.have.status(200);",
+                  "  pm.response.to.have.status(500);",
                   "});"
                 ],
                 "type": "text/javascript"
@@ -709,6 +709,7 @@
             "id": "e95c27df-c22c-46a9-9c14-649d68d8fc1f",
             "type": "text/javascript",
             "exec": [
+              "// activity with extra-customer-data",
               "postman.setEnvironmentVariable(\"activityUuid\", \"102ab02b-2046-11e7-9cc9-06a7e332783f\");"
             ]
           }
