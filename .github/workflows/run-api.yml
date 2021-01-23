@@ -37,6 +37,6 @@ jobs:
         SLACK_COLOR: '#FF0000'
         SLACK_ICON: ${{ secrets.SLACK_ICON }}
         SLACK_MESSAGE: "Houston we have a problem..(it's probably your found) check it out => https://github.com/aurelienlair/musement-apis/actions"
-        SLACK_TITLE: 'Musement APIs Newman execution report: :rotating_light:'
+        SLACK_TITLE: 'Musement APIs Newman execution report: :alert:'
         SLACK_USERNAME: Github-bot
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
