@@ -36,7 +36,7 @@
               }
             }
           ],
-          "_postman_id": "201a5bff-fc57-420a-8d78-ca94b11cf2ca",
+          "id": "201a5bff-fc57-420a-8d78-ca94b11cf2ca",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -91,7 +91,7 @@
               }
             }
           ],
-          "_postman_id": "c757d321-7217-4475-8364-241d7ffabc6b",
+          "id": "c757d321-7217-4475-8364-241d7ffabc6b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -131,7 +131,7 @@
               }
             }
           ],
-          "_postman_id": "16d82c7f-812f-403c-a277-ed9406706bc9",
+          "id": "16d82c7f-812f-403c-a277-ed9406706bc9",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -189,7 +189,7 @@
               }
             }
           ],
-          "_postman_id": "3d98c2c4-2578-46e4-8ab0-96f415a53d73",
+          "id": "3d98c2c4-2578-46e4-8ab0-96f415a53d73",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -211,10 +211,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{}"
             },
             "url": "{{baseUrl}}/carts"
           },
@@ -249,7 +246,7 @@
               }
             }
           ],
-          "_postman_id": "5d5b1f4b-c70e-4868-b090-81952695ca80",
+          "id": "5d5b1f4b-c70e-4868-b090-81952695ca80",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -271,10 +268,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"type\" : \"{{productType}}\",\n  \"product_identifier\" : \"{{productIdAdult}}\",\n  \"quantity\": 2\n}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\n  \"type\" : \"{{productType}}\",\n  \"product_identifier\" : \"{{productIdAdult}}\",\n  \"quantity\": 2\n}"
             },
             "url": "{{baseUrl}}/carts/{{cartUuid}}/items"
           },
@@ -306,7 +300,7 @@
               }
             }
           ],
-          "_postman_id": "66446c18-dd18-47cb-8549-756143cd316e",
+          "id": "66446c18-dd18-47cb-8549-756143cd316e",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -324,10 +318,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"firstname\": \"Test\",\n  \"lastname\": \"Test Aurélien\",\n  \"email\": \"aurelien.lair@musement.com\",\n  \"musement_newsletter\": \"NO\",\n  \"thirdparty_newsletter\": \"NO\"\n}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\n  \"firstname\": \"Test\",\n  \"lastname\": \"Test Aurélien\",\n  \"email\": \"aurelien.lair@musement.com\",\n  \"musement_newsletter\": \"NO\",\n  \"thirdparty_newsletter\": \"NO\"\n}"
             },
             "url": "{{baseUrl}}/carts/{{cartUuid}}/customer"
           },
@@ -479,7 +470,7 @@
               }
             }
           ],
-          "_postman_id": "aae62341-7e72-426c-8b5f-5140bd5fac22",
+          "id": "aae62341-7e72-426c-8b5f-5140bd5fac22",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -537,7 +528,7 @@
               }
             }
           ],
-          "_postman_id": "1187caf4-1b67-4595-9d80-63be479ea969",
+          "id": "1187caf4-1b67-4595-9d80-63be479ea969",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -564,10 +555,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"cart_uuid\" : \"{{cartUuid}}\"\n}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\n\t\"cart_uuid\" : \"{{cartUuid}}\"\n}"
             },
             "url": "{{baseUrl}}/orders"
           },
@@ -589,7 +577,7 @@
               }
             }
           ],
-          "_postman_id": "04b061d5-3263-4fcd-a0cf-7a57fb4b8b95",
+          "id": "04b061d5-3263-4fcd-a0cf-7a57fb4b8b95",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -611,10 +599,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"order_uuid\":\"{{order_uuid}}\",\n\t\"stripe_token\":\"1233456789\"\n}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\n\t\"order_uuid\":\"{{order_uuid}}\",\n\t\"stripe_token\":\"1233456789\"\n}"
             },
             "url": "{{baseUrlMock}}/payments/stripe/payment",
             "description": "Pay an order using stripe."
@@ -701,23 +686,23 @@
           ]
         }
       ],
-      "_postman_id": "4b15fb3d-5368-4de4-bc7f-e1c8eabffe15",
+      "id": "4b15fb3d-5368-4de4-bc7f-e1c8eabffe15",
       "event": [
         {
           "listen": "prerequest",
           "script": {
-            "id": "e95c27df-c22c-46a9-9c14-649d68d8fc1f",
+            "id": "ea1858d0-bc5a-424e-b222-eaf8dbfc34ca",
             "type": "text/javascript",
             "exec": [
               "// activity with extra-customer-data",
-              "postman.setEnvironmentVariable(\"activityUuid\", \"102ab02b-2046-11e7-9cc9-06a7e332783f\");"
+              "postman.setEnvironmentVariable(\"activityUuid\", \"1714c6a7-2046-11e7-9cc9-06a7e332783f\");"
             ]
           }
         },
         {
           "listen": "test",
           "script": {
-            "id": "d2db9c14-b32a-4155-9902-48cdc465111f",
+            "id": "c8131d89-671e-46ac-91f8-e82ef5a8b67b",
             "type": "text/javascript",
             "exec": [
               ""
