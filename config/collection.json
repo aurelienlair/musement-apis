@@ -268,7 +268,12 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"type\" : \"{{productType}}\",\n  \"product_identifier\" : \"{{productIdAdult}}\",\n  \"quantity\": 2\n}"
+              "raw": "{\n  \"type\" : \"{{productType}}\",\n  \"product_identifier\" : \"{{productIdAdult}}\",\n  \"quantity\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             },
             "url": "{{baseUrl}}/carts/{{cartUuid}}/items"
           },
@@ -322,127 +327,7 @@
             },
             "url": "{{baseUrl}}/carts/{{cartUuid}}/customer"
           },
-          "response": [
-            {
-              "id": "4fcf2e11-1971-4443-9ef9-5bb02d419484",
-              "name": "Get cart item participant info",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": "{{api_base_url}}/carts/{{cart_uuid}}/items/{{cart_item_uuid}}/participants"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Access-Control-Allow-Origin",
-                  "value": "*",
-                  "name": "Access-Control-Allow-Origin",
-                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
-                },
-                {
-                  "key": "Access-Control-Expose-Headers",
-                  "value": "Authorization,Accept-Language,Accept-Encoding,X-Musement-Currency,X-Musement-Version,cookie,x-api-key,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Location,X-Musement-Device-Type",
-                  "name": "Access-Control-Expose-Headers",
-                  "description": "Lets a server whitelist headers that browsers are allowed to access."
-                },
-                {
-                  "key": "Cache-Control",
-                  "value": "no-cache",
-                  "name": "Cache-Control",
-                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-                },
-                {
-                  "key": "Connection",
-                  "value": "keep-alive",
-                  "name": "Connection",
-                  "description": "Options that are desired for the connection"
-                },
-                {
-                  "key": "Content-Encoding",
-                  "value": "gzip",
-                  "name": "Content-Encoding",
-                  "description": "The type of encoding used on the data."
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json",
-                  "name": "Content-Type",
-                  "description": "The mime type of this content"
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 03 May 2018 07:53:27 GMT",
-                  "name": "Date",
-                  "description": "The date and time that the message was sent"
-                },
-                {
-                  "key": "Server",
-                  "value": "nginx/1.10.3",
-                  "name": "Server",
-                  "description": "A name for the server"
-                },
-                {
-                  "key": "Transfer-Encoding",
-                  "value": "chunked",
-                  "name": "Transfer-Encoding",
-                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-                },
-                {
-                  "key": "Vary",
-                  "value": "Accept-Encoding",
-                  "name": "Vary",
-                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-                },
-                {
-                  "key": "Vary",
-                  "value": "Accept-Language",
-                  "name": "Vary",
-                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-                },
-                {
-                  "key": "Vary",
-                  "value": "X-Musement-Currency",
-                  "name": "Vary",
-                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-                },
-                {
-                  "key": "Vary",
-                  "value": "X-Musement-Version",
-                  "name": "Vary",
-                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-                },
-                {
-                  "key": "Vary",
-                  "value": "Origin",
-                  "name": "Vary",
-                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-                },
-                {
-                  "key": "X-Debug-Token",
-                  "value": "e9af65",
-                  "name": "X-Debug-Token",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-Debug-Token-Link",
-                  "value": "https://musement.dev/app_dev.php/_profiler/e9af65",
-                  "name": "X-Debug-Token-Link",
-                  "description": "Custom header"
-                },
-                {
-                  "key": "X-Powered-By",
-                  "value": "PHP/7.1.16",
-                  "name": "X-Powered-By",
-                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "[]"
-            }
-          ]
+          "response": []
         },
         {
           "name": "7 - Get cart | For checking",
